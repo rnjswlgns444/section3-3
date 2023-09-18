@@ -1,4 +1,4 @@
-import{checkValidationPhone,getToken,sendTokenToSMS} from'./phone.js'  //
+import{checkValidationPhone,getToken,sendTokenToSMS} from'./phone.js'  //phone.js에서 export한 함수들을 가져와서 사용!
 
 console.log('안녕하세요~~');
 
