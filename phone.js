@@ -25,3 +25,8 @@ export function getToken(count) {  //6자리 토큰 만드는 함수
     return result;
     // console.log(result)
 }
+
+export function sendTokenToSMS(fff, ggg) {
+    console.log(fff + '번호로 인증번호' + ggg + '를 전송합니다!!');
+}
+
