@@ -1,4 +1,6 @@
-import{checkValidationPhone,getToken,sendTokenToSMS} from'./phone.js'
+import{checkValidationPhone,getToken,sendTokenToSMS} from'./phone.js'  //
+
+console.log('안녕하세요~~');
 
 function createTokenOfPhone(myphone, count) {              //api함수!
     // 1. 휴대폰번호 자릿수 맞는지 확인하기
