@@ -6,8 +6,23 @@ function createTokenOfPhone(myphone){
   }
 
   //2. 핸드폰 토큰 6자리 만들기.
+  const aaaa= 6
+  if(aaaa===undefined){
+    console.log("에러 발생! 개수를 제대로 입력해 주세요!")
+    return
+  } else if (aaaa>10){
+    console.log("에러 발생! 개수가 너무 많습니다!")
+    return
+  } else if (aaaa<=0){
+    console.log("에러 발생 갯수가 너무 적습니다!")
+    return
+  }
+  
+  const result = String(Math.floor(Math.random()*10**aaaa)).padStart(aaaa,"0")
+  console.log(result)
 
   //3. 핸드폰번호에 토큰 전송하기.
+  console.log(myphone+"번호로 인증번호"+result+"를 전송합니다!")
 }
 
-creatTokenOfPhone("01012345678")
+createTokenOfPhone("01012345678")
