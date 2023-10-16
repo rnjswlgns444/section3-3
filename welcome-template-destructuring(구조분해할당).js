@@ -1,4 +1,4 @@
-function getWelcomeTemplate({name, age, school, createdAt}){
+function getWelcomeTemplate({name, age, school, createdAt}){   //구조분해할당 적용! - key를 통해 할당이 되므로 무언가 빠져도 문제x
   const result = `
     <html>
       <body>
@@ -21,4 +21,5 @@ const myuser = {
   school: '토끼초등학교',
   createdAt: '2020-01-02'
 }
-getWelcomeTemplate(myuser)
+//getWelcomeTemplate(myuser)
+getWelcomeTemplate({name, age, school, createdAt}) //key와 value의 이름이 같음으로 vlaue값 생략!
