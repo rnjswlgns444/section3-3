@@ -8,6 +8,14 @@ export function checkValidationEmail(email){
 }
 
 export function getWelcomeTemplate({name, age, school}){
+  const createdAt = new Date()               //이것은 다른 곳에서도 자주 사용될 수 있기 때문에 util.js를 따로 만들어서 쓰는게 좋음!
+  const year = createdAt.getFullYear()
+  const month = createdAt.getMonth() +1
+  const date = createdAt.getDate()
+  //const today = year + "-" + month + "-" + date
+  const today = `${year}-#{month}-${date}`
+
+  
   return `
     <html>
       <body>
@@ -16,7 +24,7 @@ export function getWelcomeTemplate({name, age, school}){
         <div>이름: ${name}</div>
         <div>나이:${age}살</div>
         <div>학교: ${school}</div>
-        <div>가입일: 2020-02-01</div>
+        <div>가입일: ${getToday()}</div>
         </body>
         </html>
       `
